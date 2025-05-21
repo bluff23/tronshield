@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 355 92% 46%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 355 92% 46%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-tronshield-dark;
+  }
+
+  .input-container {
+    @apply relative flex items-center;
+  }
+  
+  .input-container input {
+    @apply w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-tronshield-red focus:border-transparent;
+  }
+
+  .card-security {
+    @apply border border-gray-100 rounded-xl bg-white p-6 shadow-sm transition-all hover:shadow-md;
+  }
+
+  .security-icon-container {
+    @apply flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-violet-100 text-tronshield-red;
+  }
+
+  .card-score {
+    @apply border border-gray-100 rounded-xl bg-white p-6 shadow-sm flex flex-col items-center justify-center text-center;
+  }
+
+  .btn-primary {
+    @apply bg-tronshield-red hover:bg-tronshield-red-dark text-white font-medium py-3 px-6 rounded-lg transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-tronshield-dark font-medium py-3 px-6 border border-gray-300 rounded-lg transition-colors;
+  }
+
+  .btn-transparent {
+    @apply bg-transparent hover:bg-gray-100 text-tronshield-dark font-medium py-2 px-4 rounded-lg transition-colors;
+  }
+
+  /* Progress meter styles */
+  .progress-meter {
+    @apply w-full h-3 bg-gray-200 rounded-full overflow-hidden;
+  }
+  
+  .progress-meter-fill-safe {
+    @apply h-full bg-green-500;
+  }
+  
+  .progress-meter-fill-moderate {
+    @apply h-full bg-yellow-500;
+  }
+  
+  .progress-meter-fill-risky {
+    @apply h-full bg-tronshield-red;
+  }
+}
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
